@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sai Krishna Masetti · Cybersecurity Portfolio</title>
+  <meta name="description" content="Cybersecurity portfolio for Sai Krishna Masetti: SOC, IR, SIEM, Cloud Security." />
+  <link rel="canonical" href="https://SaiKrishna-Masetti.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sai Krishna Masetti · Cybersecurity Portfolio" />
+  <meta property="og:description" content="SOC, Incident Response, SIEM, and Cloud Security projects and experience." />
+  <meta property="og:url" content="https://SaiKrishna-Masetti.github.io/" />
+  <meta property="og:image" content="assets/social-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sai Krishna Masetti · Cybersecurity Portfolio" />
+  <meta name="twitter:description" content="SOC, Incident Response, SIEM, and Cloud Security projects and experience." />
+  <meta name="twitter:image" content="assets/social-card.png" />
+  <!-- Optional analytics (Plausible). Replace example.com with your domain, then uncomment.
+  <script defer data-domain="example.com" src="https://plausible.io/js/script.js"></script>
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <canvas id="matrix"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Go to Home">
+        <img class="brand-mark" src="assets/shield.svg" alt="" />
+        <span class="brand-text">Sai Krishna Masetti</span></span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          
+        </button>
+        <ul id="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certs">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <!-- HERO -->
+    <section class="hero section" aria-label="Introduction">
+      <div class="hero-left">
+        <h1 class="glitch" data-text="Cyber Defense in Motion">
+          Cyber Defense in <span class="accent">Motion</span>
+        </h1>
+        <p class="lead">
+          I'm <strong>Sai Krishna Masetti</strong>, a cybersecurity graduate student (GPA 4.0) focused on SOC, incident response,
+          SIEM, and cloud security. I build secure systems and clear narratives so teams can move fast without breaking things.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary cta-wide" href="https://www.linkedin.com/in/sai-krishna-masetti" target="_blank" rel="noopener">View LinkedIn</a>
+          <a class="btn ghost cta-wide" href="Resume.pdf" download>Download Resume</a>
+        </div>
+        <ul class="quick-facts">
+          <li>SIEM: Splunk, QRadar, Sentinel</li>
+          <li>Cloud: AWS · Azure · GCP</li>
+          <li>Frameworks: NIST CSF · ISO27001 · MITRE ATT&CK</li>
+        </ul>
+      </div>
+      <div class="hero-right">
+        <div class="stat-card" aria-label="Live stats are illustrative">
+          <div class="stat-number" data-countto="99.97">0</div>
+          <div class="stat-label">Malicious events filtered</div>
+        </div>
+        <div class="radar">
+          <div class="ring"></div><div class="ring"></div><div class="ring"></div>
+          <div class="sweep"></div>
+        </div>
+      </div>
+    </section>
+<section id="about" class="section">
+      <h2 class="section-title">About</h2>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            I’m a hands-on security practitioner with experience across IR, threat hunting, IAM, and cloud hardening.
+            My toolkit spans SIEM, EDR/XDR, and automation with Python/PowerShell. I enjoy turning noisy telemetry into
+            action, and building pipelines that make secure the default.
+          </p>
+          <ul class="highlights">
+            <li>Security Operations: IR, Threat Hunting, Log Analysis, Vuln Mgmt, Phishing Analysis</li>
+            <li>EDR/XDR: CrowdStrike, SentinelOne, Carbon Black</li>
+            <li>Automation: SOAR playbooks, Python scripting</li>
+          </ul>
+        </div>
+        <div class="about-media">
+          <img src="assets/terminal.svg" alt="Linux terminal showing profile info" />
+        </div>
+      </div>
+    </section>
+<section id="experience" class="section">
+      <h2 class="section-title">Experience</h2>
+
+      <article class="exp-card reveal">
+        <header>
+          <h3>Tata Consultancy Services (TCS) · Cybersecurity Analyst (Virtual Simulation)</h3>
+          <span class="time">Jun 2025</span>
+        </header>
+        <ul>
+          <li>Improved access security posture by partnering with IAM consultants to define policy baselines, enabling cleaner role design and fewer exceptions.</li>
+          <li>Increased audit readiness by mapping IAM controls to compliance requirements (e.g., ISO 27001), producing clear implementable procedures.</li>
+          <li>Accelerated provisioning reviews by documenting identity governance workflows and decision trees for common scenarios.</li>
+        </ul>
+      </article>
+
+      <article class="exp-card reveal">
+        <header>
+          <h3>AIG · Cybersecurity Threat Analyst (Virtual Experience Program)</h3>
+          <span class="time">Jun 2025</span>
+        </header>
+        <ul>
+          <li>Raised threat visibility by triaging simulated alerts against CISA advisories, improving signal-to-noise for analyst review.</li>
+          <li>Strengthened remediation guidance by summarizing CVEs with business impact, helping teams prioritize patch actions.</li>
+          <li>Reduced ransomware drill recovery time by scripting a Python utility to test encrypted-zip recovery paths.</li>
+        </ul>
+      </article>
+
+      <article class="exp-card reveal">
+        <header>
+          <h3>Deloitte · Cybersecurity Consultant (Virtual Simulation)</h3>
+          <span class="time">Jun 2025</span>
+        </header>
+        <ul>
+          <li>Accelerated incident scoping by analyzing web logs to surface suspicious behavior patterns during a breach simulation.</li>
+          <li>Improved containment recommendations by isolating likely root causes and articulating response options.</li>
+          <li>Standardized decision-making by aligning actions to NIST guidance during tabletop exercises.</li>
+        </ul>
+      </article>
+
+      <article class="exp-card reveal">
+        <header>
+          <h3>Mastercard · Security Awareness Analyst (Virtual Simulation)</h3>
+          <span class="time">Jun 2025</span>
+        </header>
+        <ul>
+          <li>Lowered phishing exposure by assessing threat vectors and identifying vulnerable user cohorts.</li>
+          <li>Increased training effectiveness by designing role-based awareness modules for targeted teams.</li>
+          <li>Improved enterprise cyber hygiene by recommending actionable controls and behavioral nudges.</li>
+        </ul>
+      </article>
+
+      <article class="exp-card reveal">
+        <header>
+          <h3>CloudNext Technologies · Secure Software & Cloud Engineer</h3>
+          <span class="time">Dec 2021 — Mar 2024 · Hyderabad, India</span>
+        </header>
+        <ul>
+          <li>Safeguarded patient data by implementing secure coding (validation, encryption, OAuth/JWT, API security), achieving HIPAA/GDPR compliance across all app modules.</li>
+          <li>Reduced security incidents by 25% by configuring IAM roles, firewall rules, and multi‑cloud monitoring across AWS, Azure, and GCP.</li>
+          <li>Cut deployment misconfigurations by 40% by establishing a DevSecOps pipeline with automated scanning and secrets management.</li>
+          <li>Eliminated high‑risk flaws pre‑release by proactively testing, patching, and verifying remediation before production cutovers.</li>
+          <li>Enabled a 30% increase in user adoption while maintaining strict data protection by co‑designing secure telehealth workflows.</li>
+        </ul>
+      </article>
+    </section>
+<section id="certs" class="section">
+      <h2 class="section-title">Certifications</h2>
+      <ul class="cert-list">
+        <li>CompTIA Security+</li>
+        <li>(ISC)² Certified in Cybersecurity, CC</li>
+        <li>Google Cybersecurity Specialization</li>
+        <li>IBM Security Operations Center in Practice</li>
+        <li>IBM Cybersecurity Fundamentals</li>
+      </ul>
+    </section>
+<section id="projects" class="section">
+      <h2 class="section-title">Projects</h2>
+      <div class="proj-grid">
+        <article class="proj-card reveal">
+          <div class="proj-badge">SIEM</div>
+          <h3>SOC Automation & SIEM</h3>
+          <p>Built a virtual SOC with Splunk/ELK: log onboarding, correlation rules, dashboards, and SOAR playbooks to auto-triage common alerts.</p>
+          <ul class="tags">
+            <li>Splunk</li><li>SOAR</li><li>Threat Intel</li><li>Python</li>
+          </ul>
+          <a class="btn tiny" href="#" aria-disabled="true">Repo (private)</a>
+        </article>
+
+        <article class="proj-card reveal">
+          <div class="proj-badge">Cloud</div>
+          <h3>Cloud Hardening Blueprints</h3>
+          <p>Hardened AWS/Azure/GCP with CIS Benchmarks, IAM least privilege, and detective controls; automated drift checks in CI.</p>
+          <ul class="tags">
+            <li>AWS</li><li>Azure</li><li>GCP</li><li>CIS</li>
+          </ul>
+          <a class="btn tiny" href="#" aria-disabled="true">Docs (coming soon)</a>
+        </article>
+
+        <article class="proj-card reveal">
+          <div class="proj-badge">IR</div>
+          <h3>Incident Response Drills</h3>
+          <p>Designed tabletop and live-fire exercises targeting ransomware and phishing; scripted log generation and alert simulation.</p>
+          <ul class="tags">
+            <li>MITRE ATT&CK</li><li>Splunk</li><li>PowerShell</li>
+          </ul>
+          <a class="btn tiny" href="#" aria-disabled="true">Playbooks (coming)</a>
+        </article>
+      </div>
+    </section>
+<section id="skills" class="section">
+      <h2 class="section-title">Skills</h2>
+      <div class="chip-grid">
+        <span class="chip">Splunk</span>
+        <span class="chip">IBM QRadar</span>
+        <span class="chip">Microsoft Sentinel</span>
+        <span class="chip">CrowdStrike Falcon</span>
+        <span class="chip">SentinelOne</span>
+        <span class="chip">Carbon Black</span>
+        <span class="chip">AWS</span>
+        <span class="chip">Azure</span>
+        <span class="chip">GCP</span>
+        <span class="chip">Docker</span>
+        <span class="chip">Kubernetes</span>
+        <span class="chip">Jenkins</span>
+        <span class="chip">Active Directory</span>
+        <span class="chip">Firewall Config</span>
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">PowerShell</span>
+        <span class="chip">Bash</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">NIST CSF</span>
+        <span class="chip">ISO 27001</span>
+        <span class="chip">CIS Benchmarks</span>
+        <span class="chip">MITRE ATT&CK</span>
+        <span class="chip">HIPAA</span>
+        <span class="chip">PCI-DSS</span>
+        <span class="chip">GDPR</span>
+      </div>
+    </section>
+<section id="education" class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <h3>Webster University · MS Cybersecurity Operations</h3>
+          <p class="muted">St. Louis, MO · Dec 2025 · GPA 4.0</p>
+          <p>Network Security, Intelligence, Forensics, Threat Detection, Law & Policy, Cloud Security, Social Engineering, Encryption.</p>
+        </div>
+        <div class="edu-card">
+          <h3>IIT Kharagpur · BTech Mechanical Engineering</h3>
+          <p class="muted">May 2020</p>
+        </div>
+      </div>
+    </section>
+<section id="contact" class="section">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:saikrishnamasetti369@gmail.com">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">saikrishnamasetti369@gmail.com</span>
+        </a>
+        <a class="contact-card" href="https://www.linkedin.com/in/sai-krishna-masetti" target="_blank" rel="noopener">
+          <span class="contact-label">View LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/sai-krishna-masetti</span>
+        </a>
+      </div>
+    </section>
+    
+
+    <!-- SKILLS -->
+    
+
+    <!-- EXPERIENCE -->
+    
+
+    <!-- EDUCATION -->
+    
+
+    <!-- CERTIFICATIONS -->
+    
+
+    <!-- PROJECTS -->
+    
+
+    <!-- CONTACT -->
+    
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Sai Krishna Masetti</p>
+      <a href="#home" class="to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
