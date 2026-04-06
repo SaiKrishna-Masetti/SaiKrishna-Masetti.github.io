@@ -117,9 +117,13 @@ a:hover { text-decoration: underline; }
 .edu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
 .edu-card { background: var(--card); padding: 1rem 1.1rem; border-radius: 16px; box-shadow: var(--ring); }
 
-/* Added left padding so bullets don't hug the edge */
-.cert-list { display: grid; gap: .6rem; background: var(--card); padding: 1rem 1.25rem 1rem 1.6rem; border-radius: 16px; box-shadow: var(--ring); }
-.cert-list li { padding-left: .15rem; }
+/* Certification cards grid */
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+.cert-card { background: var(--card); padding: 1.2rem 1rem; border-radius: 16px; box-shadow: var(--ring); text-align: center; transition: transform .25s ease, box-shadow .25s ease; }
+.cert-card:hover { transform: translateY(-4px); box-shadow: 0 0 0 1px rgba(0,245,196,0.4), 0 8px 24px rgba(0,0,0,.3); }
+.cert-card h3 { font-size: .95rem; margin: .5rem 0 .3rem; }
+.cert-card .time { color: var(--muted); font-size: .8rem; font-family: "JetBrains Mono", monospace; }
+.cert-icon { font-size: 2rem; line-height: 1; }
 
 .proj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
 .proj-card { background: linear-gradient(180deg, var(--card), color-mix(in oklab, var(--card) 70%, var(--chip) 30%)); padding: 1rem 1.1rem; border-radius: 16px; box-shadow: var(--ring); position: relative; overflow: hidden; }
@@ -176,6 +180,28 @@ a:hover { text-decoration: underline; }
   animation: flicker 3s infinite ease-in-out;
 }
 @keyframes flicker { 50% { opacity: .6; } }
+
+/* Skills categories */
+.skills-category { margin-bottom: 1.5rem; }
+.skills-label { font-size: .9rem; color: var(--accent); font-family: "JetBrains Mono", monospace; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 .6rem; }
+
+/* Project detail bullets */
+.proj-details { margin: .5rem 0 .6rem .9rem; font-size: .9rem; color: var(--muted); }
+.proj-details li { margin-bottom: .3rem; }
+.proj-card .time { display: block; color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: .8rem; margin-top: .5rem; }
+
+/* Contact layout with form */
+.contact-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; align-items: start; }
+.contact-info-col { display: grid; gap: .8rem; }
+.contact-location { font-size: .9rem; margin: .4rem 0 0; }
+.contact-form { background: var(--card); padding: 1.5rem; border-radius: 16px; box-shadow: var(--ring); }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: .3rem; font-weight: 600; font-size: .9rem; color: var(--muted); }
+.form-group input, .form-group textarea { width: 100%; padding: .7rem .8rem; background: var(--chip); border: 1px solid rgba(0,245,196,.15); border-radius: 10px; color: var(--text); font-family: inherit; font-size: .95rem; outline: none; transition: border-color .2s; }
+.form-group input:focus, .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,245,196,.1); }
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-submit { width: 100%; padding: .8rem; font-size: 1rem; cursor: pointer; border: none; }
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } }
 
 /* Accessibility helpers */
 .skip-link {
