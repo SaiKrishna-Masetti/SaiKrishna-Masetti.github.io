@@ -68,6 +68,23 @@
         <h1 class="glitch" data-text="Cyber Defense in Motion">
           Cyber Defense in <span class="accent">Motion</span>
         </h1>
+
+        <div class="terminal-box" aria-label="Animated terminal introduction">
+          <div class="terminal-bar">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">sai@cybersec:~</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="terminal-prompt">$</span>
+              <span class="terminal-typed" id="typed-output"></span>
+              <span class="terminal-cursor" id="terminal-cursor">▌</span>
+            </div>
+          </div>
+        </div>
+
         <p class="lead">
           I'm <strong>Sai Krishna Masetti</strong>, a cybersecurity professional (MS, 4.0 GPA) with CompTIA Security+ and (ISC)² CC certifications, combining 2+ years of secure software and cloud engineering with independent threat intelligence research. Deployed an AWS honeypot capturing 1M+ attack events, mapped TTPs to MITRE ATT&CK, and automated threat intel reporting with Python. Seeking SOC Analyst or Security Engineer roles.
         </p>
@@ -212,7 +229,7 @@
       <div class="proj-grid">
         <article class="proj-card reveal">
           <div class="proj-badge">Threat Intel</div>
-          <h3>AWS Honeypot Threat Intelligence Platform</h3>
+          <h3 class="proj-title-row">AWS Honeypot Threat Intelligence Platform <a class="proj-github-link" href="https://github.com/SaiKrishna-Masetti/aws-honeypot-threat-intel" target="_blank" rel="noopener" title="View on GitHub">GitHub ↗</a></h3>
           <p>Deployed a Cowrie SSH/Telnet honeypot on AWS EC2 using Docker, capturing 1M+ events from 7,241 unique IPs across 139,027 sessions over a 6-month collection period.</p>
           <ul class="proj-details">
             <li>Mapped attacker behavior to 7 MITRE ATT&CK techniques including Brute Force (T1110), Valid Accounts (T1078), and Ingress Tool Transfer (T1105), identifying 3,824 unique malware samples via SHA256 hashing.</li>
@@ -328,32 +345,13 @@
     </section>
 <section id="contact" class="section">
       <h2 class="section-title">Contact</h2>
-      <div class="contact-layout">
-        <div class="contact-info-col">
-          <a class="contact-card" href="mailto:saikrishnamasetti369@gmail.com">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">saikrishnamasetti369@gmail.com</span>
-          </a>
-          <a class="contact-card" href="tel:+19452494935">
-            <span class="contact-label">Phone</span>
-            <span class="contact-value">+1 (945) 249-4935</span>
-          </a>
-          <a class="contact-card" href="https://www.linkedin.com/in/sai-krishna-masetti" target="_blank" rel="noopener">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-value">linkedin.com/in/sai-krishna-masetti</span>
-          </a>
-          <a class="contact-card" href="https://saikrishna-masetti.github.io" target="_blank" rel="noopener">
-            <span class="contact-label">Portfolio</span>
-            <span class="contact-value">saikrishna-masetti.github.io</span>
-          </a>
-          <p class="muted contact-location">St. Louis, MO</p>
-        </div>
-        <div class="contact-form-col">
-          <form id="contact-form" class="contact-form" action="https://formsubmit.co/saikrishnamasetti369@gmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Portfolio Contact Form Message">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://saikrishna-masetti.github.io/#contact">
-            <input type="text" name="_honey" style="display:none">
+      <div class="contact-form-wrapper">
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/saikrishnamasetti369@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Portfolio Contact Form Message">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://saikrishna-masetti.github.io/#contact">
+          <input type="text" name="_honey" style="display:none">
+          <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required placeholder="Your name">
@@ -362,17 +360,17 @@
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required placeholder="your@email.com">
             </div>
-            <div class="form-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required placeholder="Subject">
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
-            </div>
-            <button type="submit" class="btn primary form-submit">Send Message</button>
-          </form>
-        </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Your message..."></textarea>
+          </div>
+          <button type="submit" class="btn primary form-submit">Send Message</button>
+        </form>
       </div>
     </section>
   </main>

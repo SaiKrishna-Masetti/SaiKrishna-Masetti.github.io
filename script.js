@@ -39,6 +39,69 @@ const io2 = new IntersectionObserver((entries)=>{
 }, { threshold: 0.18 });
 revealEls.forEach(el => io2.observe(el));
 
+// Terminal typing effect
+(function terminalTyper() {
+  const el = document.getElementById("typed-output");
+  const cursor = document.getElementById("terminal-cursor");
+  if (!el) return;
+
+  const lines = [
+    "SOC Analyst | Security Engineer",
+    "SIEM: Splunk · Wazuh · QRadar · Sentinel",
+    "1M+ honeypot events captured & analyzed",
+    "MITRE ATT&CK · NIST CSF · ISO 27001",
+    "CompTIA Security+ | (ISC)² CC Certified"
+  ];
+
+  let lineIdx = 0, charIdx = 0, deleting = false, pause = 0;
+  const typeSpeed = 55, deleteSpeed = 30, linePause = 2000, deletePause = 800;
+
+  function tick() {
+    if (pause > 0) { pause -= 16; requestAnimationFrame(tick); return; }
+
+    const currentLine = lines[lineIdx];
+
+    if (!deleting) {
+      charIdx++;
+      el.textContent = currentLine.slice(0, charIdx);
+      if (charIdx >= currentLine.length) {
+        deleting = true;
+        pause = linePause;
+      }
+    } else {
+      charIdx--;
+      el.textContent = currentLine.slice(0, charIdx);
+      if (charIdx <= 0) {
+        deleting = false;
+        lineIdx = (lineIdx + 1) % lines.length;
+        pause = deletePause;
+      }
+    }
+
+    requestAnimationFrame(() => setTimeout(tick, deleting ? deleteSpeed : typeSpeed));
+  }
+  tick();
+})();
+
+// Active nav highlight on scroll
+(function scrollSpy() {
+  const sections = $$("section[id], main[id]");
+  const navLinks = $$(".main-nav a[href^='#']");
+
+  function update() {
+    let current = "";
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top <= 120) current = sec.getAttribute("id");
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+    });
+  }
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+})();
+
 // Matrix rain background
 (function matrixRain() {
   const c = document.getElementById("matrix");
